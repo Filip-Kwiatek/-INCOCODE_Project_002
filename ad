@@ -1,0 +1,27 @@
+window.onload = function () {
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      var inputs = document.getElementById("contactForm").elements;
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value !== "") {
+          console.log(inputs[i].name + ": " + inputs[i].value);
+        }
+      }
+    });
+};
+
+function myForm(event) {
+  let name = document.getElementById("firstNameInput").value;
+  console.log("Imie: " + name);
+  let surname = document.getElementById("surnameInput").value;
+  console.log("Nazwisko: " + surname);
+  let tele = document.getElementById("telephoneInput").value;
+  console.log("Telefon: " + tele);
+  let mail = document.getElementById("emailInput").value;
+  console.log("Email: " + mail);
+  let message = document.getElementById("messageInput").value;
+  console.log("Wiadomosc: " + message);
+  event.preventDefault();
+}
